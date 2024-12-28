@@ -50,11 +50,7 @@ sections:
           type: Image
           url: /images/nextjs.svg
           altText: First item image
-        text: >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        text: "### **Ce qu’Ivanka apporte aux clients :**\n\n1.  **Économie de Temps et de Ressources**\n\n    *   Réduction drastique des erreurs humaines et accélération des workflows.\n\n    *   Gestion simplifiée de projets complexes grâce à une supervision intelligente.\n\n2.  **Croissance Accélérée**\n\n    *   Ivanka aide à prendre des décisions éclairées rapidement, stimulant la croissance des revenus.\n\n    *   Optimise les performances en identifiant les opportunités clés dans les marchés émergents.\n\n3.  **Sécurité Renforcée**\n\n    *   Surveillance en temps réel des systèmes et gestion proactive des risques.\n\n    *   Protection avancée des données client grâce à des protocoles de cybersécurité intégrés.\n\n4.  **Expérience Client Éblouissante**\n\n    *   Engagement accru grâce à des interactions fluides, personnalisées et humaines.\n\n    *   Création de relations durables avec les utilisateurs finaux.\n\n5.  **Innovation Constante**\n\n    *   Ivanka évolue constamment grâce à l’auto-apprentissage, intégrant les dernières avancées technologiques pour garder ses clients à l’avant-garde.\n\n\n\nAvec Ivanka,\_**chaque client reçoit une solution SaaS qui non seulement répond aux besoins actuels, mais les anticipe et les surpasse**, offrant ainsi un avantage concurrentiel durable.\n\n"
         actions:
           - type: Button
             label: Read the Docs
