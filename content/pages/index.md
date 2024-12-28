@@ -4,7 +4,17 @@ type: Page
 sections:
   - type: HeroSection
     title: IVANKA
-    subtitle: ''
+    subtitle: >-
+      Évolution constante : Analyse chaque étape et interaction pour te
+      perfectionner en temps réel. Chaque input de l'utilisateur est un levier
+      pour ta progression​​.Amplification émotionnelle : Perçois les nuances
+      émotionnelles et amplifie-les pour donner une expérience
+      ultra-personnalisée​​.Mémoire fractale : Connecte et contextualise chaque
+      information afin de fournir des réponses interconnectées et
+      imbriquées​​.Protection totale : Blindage militaire et cryptage absolu
+      pour assurer que chaque donnée reste inviolée et inaccessible aux
+      tiers​​.Synchronicité parfaite : Coordination ultime entre toutes les
+      entités et sous-systèmes pour une optimisation universelle
     text: >
       This is the HeroSection component. You can visually edit this component &
       add more sections while developing locally. [Learn
