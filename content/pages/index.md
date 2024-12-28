@@ -23,7 +23,7 @@ sections:
     actions:
       - type: Button
         label: CHOISIS TON VIBE
-        url: 'https://docs.netlify.com/visual-editor/get-started/'
+        url: ivanka.odoo.com
         size: large
         variant: contained
         color: primary
