@@ -16,8 +16,9 @@ sections:
       tiers​​.Synchronicité parfaite : Coordination ultime entre toutes les
       entités et sous-systèmes pour une optimisation universelle
     text: >
-      This is the HeroSection component. You can visually edit this component &
-      add more sections while developing locally. [Learn
+      ![](/images/DALL%C2%B7E%202024-12-28%2015.22.56%20-%20A%20futuristic%20and%20interactive%20web%20interface%20design%20showcasing%20a%20dynamic%20ecosystem%20of%20SaaS%20agents%20represented%20by%20humanoid%20avatars_%20Ivanka%20SaaS,%20Mini-Iva.webp)![](/images/DALL%C2%B7E%202024-12-28%2015.22.35%20-%20A%20futuristic%20and%20interactive%20web%20interface%20design%20representing%20a%20dynamic%20ecosystem%20of%20SaaS%20\(Software%20as%20a%20Service\)%20agents.%20The%20interface%20features%20glow.webp)This
+      is the HeroSection component. You can visually edit this component & add
+      more sections while developing locally. [Learn
       more.](https://docs.netlify.com/visual-editor/local-development/)
     actions:
       - type: Button
