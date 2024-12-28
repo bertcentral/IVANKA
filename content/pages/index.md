@@ -28,7 +28,7 @@ sections:
       altText: Hero section image
   - type: CardsSection
     title: MODEL IVANKA
-    subtitle: Section subtitle here
+    subtitle: ''
     items:
       - type: Card
         title: First Card Title
