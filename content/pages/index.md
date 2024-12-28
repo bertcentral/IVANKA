@@ -39,7 +39,7 @@ sections:
         /images/DALL·E 2024-12-28 15.22.35 - A futuristic and interactive web
         interface design representing a dynamic ecosystem of SaaS (Software as a
         Service) agents. The interface features glow.webp
-      altText: Hero section image
+      altText: SERVICE
   - type: CardsSection
     title: IVANKA
     subtitle: modèle ivanka
