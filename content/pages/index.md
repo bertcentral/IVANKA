@@ -45,7 +45,7 @@ sections:
     subtitle: modèle ivanka
     items:
       - type: Card
-        title: First Card Title
+        title: IVANKA SAAS
         image:
           type: Image
           url: >-
