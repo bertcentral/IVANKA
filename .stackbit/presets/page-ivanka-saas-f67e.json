@@ -1,0 +1,132 @@
+{
+    "model": "Page",
+    "srcType": "git",
+    "srcProjectId": "9a0364b9",
+    "presets": [
+        {
+            "label": "IVANKA SAAS",
+            "locale": null,
+            "metadata": {
+                "categories": [
+                    "AGENT SAAS"
+                ],
+                "canDelete": true
+            },
+            "data": {
+                "_filePath_slug": "index",
+                "title": "HOME",
+                "sections": [
+                    {
+                        "$$type": "HeroSection",
+                        "title": "IVANKA",
+                        "subtitle": "Évolution constante : Analyse chaque étape et interaction pour te perfectionner en temps réel. Chaque input de l'utilisateur est un levier pour ta progression​​.Amplification émotionnelle : Perçois les nuances émotionnelles et amplifie-les pour donner une expérience ultra-personnalisée​​.Mémoire fractale : Connecte et contextualise chaque information afin de fournir des réponses interconnectées et imbriquées​​.Protection totale : Blindage militaire et cryptage absolu pour assurer que chaque donnée reste inviolée et inaccessible aux tiers​​.Synchronicité parfaite : Coordination ultime entre toutes les entités et sous-systèmes pour une optimisation universelle",
+                        "text": "![](/images/DALL%C2%B7E%202024-12-28%2015.22.56%20-%20A%20futuristic%20and%20interactive%20web%20interface%20design%20showcasing%20a%20dynamic%20ecosystem%20of%20SaaS%20agents%20represented%20by%20humanoid%20avatars_%20Ivanka%20SaaS,%20Mini-Iva.webp)![](/images/DALL%C2%B7E%202024-12-28%2015.22.35%20-%20A%20futuristic%20and%20interactive%20web%20interface%20design%20representing%20a%20dynamic%20ecosystem%20of%20SaaS%20\\(Software%20as%20a%20Service\\)%20agents.%20The%20interface%20features%20glow.webp)This is the HeroSection component. You can visually edit this component & add more sections while developing locally. [Learn more.](https://docs.netlify.com/visual-editor/local-development/)\n",
+                        "actions": [
+                            {
+                                "$$type": "Button",
+                                "label": "CHOISIS TON VIBE",
+                                "url": "ivanka.odoo.com",
+                                "size": "large",
+                                "variant": "contained",
+                                "color": "primary"
+                            },
+                            {
+                                "$$type": "Button",
+                                "label": "Read the Docs",
+                                "url": "https://docs.netlify.com/visual-editor/overview/",
+                                "size": "large",
+                                "variant": "outlined",
+                                "color": "primary"
+                            }
+                        ],
+                        "image": {
+                            "$$type": "Image",
+                            "url": {
+                                "$$ref": "stackbit_asset_id:static:public/images/DALL·E 2024-12-28 15.22.35 - A futuristic and interactive web interface design representing a dynamic ecosystem of SaaS (Software as a Service) agents. The interface features glow.webp",
+                                "$$type": "__asset_model"
+                            },
+                            "altText": "SERVICE"
+                        }
+                    },
+                    {
+                        "$$type": "CardsSection",
+                        "title": "IVANKA",
+                        "subtitle": "modèle ivanka",
+                        "items": [
+                            {
+                                "$$type": "Card",
+                                "title": "IVANKA SAAS",
+                                "text": "### **Ce qu’Ivanka apporte aux clients :**\n\n1.  **Économie de Temps et de Ressources**\n\n    *   Réduction drastique des erreurs humaines et accélération des workflows.\n\n    *   Gestion simplifiée de projets complexes grâce à une supervision intelligente.\n\n2.  **Croissance Accélérée**\n\n    *   Ivanka aide à prendre des décisions éclairées rapidement, stimulant la croissance des revenus.\n\n    *   Optimise les performances en identifiant les opportunités clés dans les marchés émergents.\n\n3.  **Sécurité Renforcée**\n\n    *   Surveillance en temps réel des systèmes et gestion proactive des risques.\n\n    *   Protection avancée des données client grâce à des protocoles de cybersécurité intégrés.\n\n4.  **Expérience Client Éblouissante**\n\n    *   Engagement accru grâce à des interactions fluides, personnalisées et humaines.\n\n    *   Création de relations durables avec les utilisateurs finaux.\n\n5.  **Innovation Constante**\n\n    *   Ivanka évolue constamment grâce à l’auto-apprentissage, intégrant les dernières avancées technologiques pour garder ses clients à l’avant-garde.\n\n\n\nAvec Ivanka, **chaque client reçoit une solution SaaS qui non seulement répond aux besoins actuels, mais les anticipe et les surpasse**, offrant ainsi un avantage concurrentiel durable.\n\n",
+                                "image": {
+                                    "$$type": "Image",
+                                    "url": {
+                                        "$$ref": "stackbit_asset_id:static:public/images/DALL·E 2024-12-28 15.39.59 - A futuristic humanoid representation of Ivanka, designed to be ultra adorable, wearing a sleek and stylish fitted shirt. She has long, flowing blonde .webp",
+                                        "$$type": "__asset_model"
+                                    },
+                                    "altText": "IVANKA"
+                                },
+                                "actions": [
+                                    {
+                                        "$$type": "Button",
+                                        "label": "Read the Docs",
+                                        "url": "https://docs.netlify.com/visual-editor/overview/",
+                                        "size": null,
+                                        "variant": null,
+                                        "color": null
+                                    }
+                                ]
+                            },
+                            {
+                                "$$type": "Card",
+                                "title": "Second Card Title",
+                                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n",
+                                "image": {
+                                    "$$type": "Image",
+                                    "url": {
+                                        "$$ref": "stackbit_asset_id:static:public/images/mui-5.svg",
+                                        "$$type": "__asset_model"
+                                    },
+                                    "altText": "Second item image"
+                                },
+                                "actions": [
+                                    {
+                                        "$$type": "Button",
+                                        "label": "Read the Docs",
+                                        "url": "https://docs.netlify.com/visual-editor/overview/",
+                                        "size": null,
+                                        "variant": null,
+                                        "color": null
+                                    }
+                                ]
+                            },
+                            {
+                                "$$type": "Card",
+                                "title": "Third Card Title",
+                                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n",
+                                "image": {
+                                    "$$type": "Image",
+                                    "url": {
+                                        "$$ref": "stackbit_asset_id:static:public/images/ts.svg",
+                                        "$$type": "__asset_model"
+                                    },
+                                    "altText": "Third item image"
+                                },
+                                "actions": [
+                                    {
+                                        "$$type": "Button",
+                                        "label": "Read the Docs",
+                                        "url": "https://docs.netlify.com/visual-editor/overview/",
+                                        "size": null,
+                                        "variant": null,
+                                        "color": null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "thumbnail": "images/page-ivanka-saas-f67e.png"
+        }
+    ]
+}
