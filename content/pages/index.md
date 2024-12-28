@@ -27,7 +27,7 @@ sections:
       url: /images/hero.svg
       altText: Hero section image
   - type: CardsSection
-    title: MODEL IVANKA
+    title: IVANKA
     subtitle: ''
     items:
       - type: Card
