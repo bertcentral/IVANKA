@@ -58,6 +58,12 @@ sections:
           - type: Button
             label: ACHAT
             url: 'https://www.ivanka.odoo.com'
+          - type: Button
+            label: ESAYER
+            url: https//www.ivanka.odoo.com
+            size: medium
+            variant: text
+            color: primary
       - type: Card
         title: Second Card Title
         image:
