@@ -9,7 +9,7 @@
                 "label": "MENU",
                 "url": "/",
                 "underline": "hover",
-                "color": "secondary"
+                "color": "primary"
             },
             {
                 "type": "Link",
