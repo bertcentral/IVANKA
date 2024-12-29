@@ -31,7 +31,7 @@ sections:
         label: POURQUOI
         url: 'https://docs.netlify.com/visual-editor/overview/'
         size: large
-        variant: text
+        variant: outlined
         color: primary
     image:
       type: Image
