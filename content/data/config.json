@@ -8,7 +8,8 @@
                 "type": "Link",
                 "label": "MENU",
                 "url": "/",
-                "underline": "hover"
+                "underline": "hover",
+                "color": "primary"
             },
             {
                 "type": "Link",
