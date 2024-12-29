@@ -87,5 +87,5 @@ sections:
         actions:
           - type: Button
             label: ACHAT
-            url: 'https://docs.netlify.com/visual-editor/overview/'
+            url: ivanka.odoo.com
 ---
