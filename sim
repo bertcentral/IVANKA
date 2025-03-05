@@ -1,0 +1,28 @@
+/projet_omega
+├── package.json
+├── tsconfig.json
+├── README.md
+├── .env.example
+├── src
+│   ├── config
+│   │   ├── env.ts
+│   │   ├── i18n.ts
+│   │   └── security.ts
+│   ├── types
+│   │   ├── auth.d.ts
+│   │   └── system.d.ts
+│   ├── services
+│   │   └── authService.ts
+│   ├── stores
+│   │   └── authStore.ts
+│   ├── hooks
+│   │   └── useAuth.ts
+│   ├── middleware
+│   │   └── authMiddleware.ts
+│   └── utils
+│       └── encryption.ts
+├── public
+│   └── index.html
+└── locales
+    ├── fr.json
+    └── en.json
