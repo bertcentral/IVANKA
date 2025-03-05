@@ -1,0 +1,44 @@
+# Projet Omega
+
+Ce dépôt contient l'architecture complète du projet Omega, qui intègre :
+- La configuration et la gestion des variables d'environnement
+- L'internationalisation (i18n)
+- La sécurité avancée (politiques de mot de passe, CORS, en-têtes de sécurité)
+- Des services d'authentification et des communications sécurisées
+- La gestion d'état avec Zustand
+- Des hooks et middlewares pour la protection des routes
+
+## Installation
+
+1. Clonez le dépôt :
+
+   ```bash
+   git clone https://github.com/votre-utilisateur/projet_omega.git
+   cd projet_omega/projet_omega
+├── package.json
+├── tsconfig.json
+├── README.md
+├── .env.example
+├── src
+│   ├── config
+│   │   ├── env.ts
+│   │   ├── i18n.ts
+│   │   └── security.ts
+│   ├── types
+│   │   ├── auth.d.ts
+│   │   └── system.d.ts
+│   ├── services
+│   │   └── authService.ts
+│   ├── stores
+│   │   └── authStore.ts
+│   ├── hooks
+│   │   └── useAuth.ts
+│   ├── middleware
+│   │   └── authMiddleware.ts
+│   └── utils
+│       └── encryption.ts
+├── public
+│   └── index.html
+└── locales
+    ├── fr.json
+    └── en.json
