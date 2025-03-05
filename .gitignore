@@ -1,43 +1,21 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# CyberNinja 71+ Omniversal Deployment Architecture
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-pnpm-lock.yaml
+[![Build Status](https://github.com/bertcentral/IVANKA/actions/workflows/pipeline.yml/badge.svg)](https://github.com/bertcentral/IVANKA/actions)
 
-# stackbit
-.cache
-.stackbit/cache
+## Overview
 
-# testing
-/coverage
+Ce repository contient l'architecture complète pour **CyberNinja 71+** :
+- **Vectorisation Sémantique Cosmique** avec Qdrant & Sentence Transformers.
+- **Orchestration Multi-Réalité K8s** via Helm.
+- **Mutation Pipeline IA** avec Optuna.
+- **CI/CD** via GitHub Actions.
+- **Monitoring & Sécurité** avec Prometheus.
+- **Dockerfile** pour conteneurisation.
+- **Mode Omega Défense Proactive IA** activé (watchdog, backups automatiques, monitoring avancé).
 
-# next.js
-/.next/
-/out/
+## Installation & Déploiement
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-Thumbs.db
-
-# debug
-npm-debug.log*
-.pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# IDE
-*.code-workspace
-.idea
+1. **Clonez le repo** :
+   ```bash
+   git clone https://github.com/bertcentral/IVANKA.git
+   cd IVANKA
