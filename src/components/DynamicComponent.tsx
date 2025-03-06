@@ -1,8 +1,4 @@
-(/auth/login, /auth/refresh), la gestion de contenu (/content/update) et le monitoring (/status/metrics).
-- **Monitoring système** : Intégration de psutil pour la collecte de métriques système en temps réel.
-- **Frontend** : Application React servie via NGINX, avec une interface moderne stylisée avec TailwindCSS et Dark Mode natif.
-- **Infrastructure** : Orchestration via Docker Compose, avec réseaux privés et dépendances entre services.
-- **CI/CD** : Pipeline automatisée avec GitHub Actions pour le linting, les tests, la construction des images Docker et le déploiement.
+(/auth/login, /auth/refresh)(/content/update) et le monitoring (/status/metrics)**Monitoring système** **Frontend** : Application React servie via NGINX **Infrastructure** : **CI/CD** : Pipeline automatisée avec GitHub Actions pour le linting, les tests, la construction des images Docker et le déploiement.
 - **Sécurité avancée** : Configuration CORS, Rate Limiting, headers sécurisés via Flask-Talisman et gestion des tokens JWT avec refresh tokens.
 - **Mode Offline** : Progressive Web App (PWA) avec service workers pour une utilisation hors-ligne.
 - **Monitoring visuel** : Intégration de Grafana et Prometheus pour la visualisation des métriques du backend.
