@@ -20,8 +20,3 @@
 - **Monitoring** : Prometheus, Grafana
 - **CI/CD** : GitHub Actions
 - **Tests** : pytest (backend), eslint (frontend)
-
-**Cloner le dépôt :**
-   ```bash
-   git clone https://github.com/ton-utilisateur/ton-depot.git
-   cd ton-depot
