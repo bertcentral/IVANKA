@@ -1,3 +1,0 @@
-- **Monitoring & Sécurité** avec Prometheus.
-- **Dockerfile** pour conteneurisation.
-- **Mode Omega Défense Proactive IA** activé (watchdog, backups automatiques, monitoring avancé
