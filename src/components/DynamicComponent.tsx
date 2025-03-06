@@ -1,9 +1,3 @@
-# App Admin Fullstack
-
-Ce dépôt contient une application fullstack complète, conçue pour offrir une solution de gestion administrative avec un backend Flask ultra-prod et un frontend React ultra-performant. Ce projet intègre également des outils de monitoring (Grafana, Prometheus) et une pipeline CI/CD via GitHub Actions, le tout orchestré à l'aide de Docker Compose.
-
-## Table des matières
-
 - [Fonctionnalités](#fonctionnalités)
 - [Architecture du projet](#architecture-du-projet)
 - [Technologies utilisées](#technologies-utilisées)
