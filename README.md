@@ -1,4 +1,3 @@
-- [CI/CD](#cicd)
 - [Tests](#tests)
 - [Contribuer](#contribuer)
 - [Licence](#licence)
