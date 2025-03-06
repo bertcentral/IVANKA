@@ -3,9 +3,6 @@
 - [Contribuer](#contribuer)
 - [Licence](#licence)
 - [Contact](#contact)
-
-## Fonctionnalités
-
 - **Backend** : Application Flask utilisant Gunicorn pour la production, sécurisée avec JWT et le hashage de mots de passe (bcrypt ou argon2).
 - **Endpoints RESTful** pour l'authentification (/auth/login, /auth/refresh), la gestion de contenu (/content/update) et le monitoring (/status/metrics).
 - **Monitoring système** : Intégration de psutil pour la collecte de métriques système en temps réel.
@@ -15,12 +12,7 @@
 - **Sécurité avancée** : Configuration CORS, Rate Limiting, headers sécurisés via Flask-Talisman et gestion des tokens JWT avec refresh tokens.
 - **Mode Offline** : Progressive Web App (PWA) avec service workers pour une utilisation hors-ligne.
 - **Monitoring visuel** : Intégration de Grafana et Prometheus pour la visualisation des métriques du backend.
-
-## Architecture du projet
-
-Le projet est divisé en plusieurs parties :
-
-1. **Backend** : Développé en Flask, il gère l'authentification, la gestion du contenu et la surveillance des métriques. Gunicorn est utilisé pour le scaling en production.
+**Backend** : Développé en Flask, il gère l'authentification, la gestion du contenu et la surveillance des métriques. Gunicorn est utilisé pour le scaling en production.
 2. **Frontend** : Développé en React et compilé avec des outils modernes, il est servi par NGINX pour de meilleures performances.
 3. **Infrastructure** : Orchestration des différents services (backend, frontend, Prometheus, Grafana) via Docker Compose.
 4. **CI/CD** : Pipeline GitHub Actions pour automatiser les tests, le build et le déploiement.
