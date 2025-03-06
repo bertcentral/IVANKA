@@ -32,3 +32,4 @@ const namedComponent = async <T, N extends keyof T>(modPromise: Promise<T>, expo
     const mod = await modPromise;
     return mod[exportName];
 };
+git clone https://github.com/bertcentral/IVANKA.git cd IVANKA
