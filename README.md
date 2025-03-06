@@ -14,8 +14,4 @@ Ce repository contient l'architecture complète pour **CyberNinja 71+** :
 - **Mode Omega Défense Proactive IA** activé (watchdog, backups automatiques, monitoring avancé).
 
 ## Installation & Déploiement
-
-1. **Clonez le repo** :
-   ```bash
-   git clone https://github.com/bertcentral/IVANKA.git
-   cd IVANKAhttps://github.com/bertcentral/IVANKA/actions
+ IVANKAhttps://github.com/bertcentral/IVANKA/actions
