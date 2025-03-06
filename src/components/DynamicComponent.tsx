@@ -1,5 +1,4 @@
-- **Backend** : Application Flask utilisant Gunicorn pour la production, sécurisée avec JWT et le hashage de mots de passe (bcrypt ou argon2).
-- **Endpoints RESTful** pour l'authentification (/auth/login, /auth/refresh), la gestion de contenu (/content/update) et le monitoring (/status/metrics).
+(/auth/login, /auth/refresh), la gestion de contenu (/content/update) et le monitoring (/status/metrics).
 - **Monitoring système** : Intégration de psutil pour la collecte de métriques système en temps réel.
 - **Frontend** : Application React servie via NGINX, avec une interface moderne stylisée avec TailwindCSS et Dark Mode natif.
 - **Infrastructure** : Orchestration via Docker Compose, avec réseaux privés et dépendances entre services.
