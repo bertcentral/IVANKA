@@ -1,3 +1,533 @@
-{
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Démonstration du Système de Particules</title>
+  <style>
+    :root {
+      --accent-color: #3498db;
+      --dark-bg: #1a1a1a;
+      --light-text: #f5f5f5;
+      --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-out: cubic-bezier(0, 0, 0.2, 1);
+      --animation-duration: 0.6s;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--light-text);
+      line-height: 1.6;
+    }
+    
+    header {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      overflow: hidden;
+      background: linear-gradient(45deg, #2c3e50, #2980b9);
+    }
+    
+    .header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 110%;
+      height: 110%;
+      background: url('/api/placeholder/1000/400') center/cover;
+      opacity: 0.2;
+      z-index: 0;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid var(--accent-color);
+      margin-bottom: 1.5rem;
+      object-fit: cover;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .typewriter {
+      font-size: 1.2rem;
+      overflow: hidden;
+      border-right: 0.15em solid var(--accent-color);
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+    }
+    
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .skill-tag {
+      background-color: rgba(52, 152, 219, 0.3);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    
+    .skill-tag:hover {
+      transform: translateY(-5px);
+      background-color: var(--accent-color);
+    }
+    
+    .skill-progress {
+      width: 0%;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+      margin-top: 5px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    section {
+      margin: 4rem 0;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+    
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    
+    .details-btn {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .details-btn:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+    
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .filter-btn {
+      background-color: transparent;
+      border: 1px solid var(--accent-color);
+      color: var(--light-text);
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: var(--accent-color);
+      color: white;
+    }
+    
+    .package-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .package-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer {
+      background-color: #2c3e50;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    
+    .social-link {
+      color: var(--light-text);
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      color: var(--accent-color);
+      transform: scale(1.2);
+    }
+    
+    /* Animations */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: var(--accent-color) }
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .projects, .package-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-bg"></div>
+    <div class="header-content">
+      <img src="/api/placeholder/200/200" alt="Profile Picture" class="profile-pic">
+      <h1>Developeur71+</h1>
+      <p class="typewriter">Développeur Web Passionné | Full Stack | Innovation Technologique</p>
+      <div class="skills">
+        <div>
+          <span class="skill-tag">JavaScript</span>
+          <div class="skill-progress"></div>
+        </div>
+        <div>
+          <span class="skill-tag">React</span>
+          <div class="skill-progress"></div>
+        </div>
+        <div>
+          <span class="skill-tag">Node.js</span>
+          <div class="skill-progress"></div>
+        </div>
+        <div>
+          <span class="skill-tag">Python</span>
+          <div class="skill-progress"></div>
+        </div>
+        <div>
+          <span class="skill-tag">CSS Animation</span>
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    <section>
+      <h2>Projets Récents</h2>
+      <div class="projects">
+        <div class="project-card" data-details="Backend complet avec interface d'administration utilisant Flask et OpenAI">
+          <h3>Omega Infinix</h3>
+          <p>Backend complet avec interface d'administration</p>
+          <p>Technologies: Python, Flask, OpenAI, MQTT</p>
+          <button class="details-btn">Détails</button>
+        </div>
+        
+        <div class="project-card" data-details="Application web temps réel pour la visualisation de données IoT">
+          <h3>DataSync Pro</h3>
+          <p>Visualisation de données IoT en temps réel</p>
+          <p>Technologies: React, Node.js, Socket.io, D3.js</p>
+          <button class="details-btn">Détails</button>
+        </div>
+        
+        <div class="project-card" data-details="Système d'animation fluide et optimisé pour les interfaces web modernes">
+          <h3>AnimaFlow</h3>
+          <p>Bibliothèque d'animations web ultra-fluides</p>
+          <p>Technologies: JavaScript, CSS, SVG, Canvas</p>
+          <button class="details-btn">Détails</button>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Approche de Distribution de Packages</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="strategy">Stratégie</button>
+        <button class="filter-btn" data-filter="config">Configuration</button>
+      </div>
+      <div class="package-details">
+        <div class="package-card" data-category="strategy">
+          <h3>Déploiement Continu</h3>
+          <p>Automatisation du processus de déploiement avec CI/CD pour une intégration fluide et rapide.</p>
+        </div>
+        
+        <div class="package-card" data-category="config">
+          <h3>Configuration Modulaire</h3>
+          <p>Architecture de configuration adaptable selon l'environnement de déploiement.</p>
+        </div>
+        
+        <div class="package-card" data-category="strategy">
+          <h3>Monitoring Avancé</h3>
+          <p>Système de surveillance en temps réel avec alertes intelligentes et dashboards personnalisés.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Developeur71+ | Tous droits réservés</p>
+    <div class="social-links">
+      <a href="#" class="social-link">GitHub</a>
+      <a href="#" class="social-link">LinkedIn</a>
+      <a href="#" class="social-link">Twitter</a>
+    </div>
+  </footer>
+  
+  <script>
+    // Skill Progress Animation
+    const skillProgress = document.querySelectorAll('.skill-progress');
+    window.addEventListener('load', () => {
+      skillProgress.forEach((progress, index) => {
+        setTimeout(() => {
+          progress.style.width = `${Math.random() * 60 + 40}%`;
+        }, index * 200);
+      });
+    });
+
+    // Filter Buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const packageCards = document.querySelectorAll('.package-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        const filter = button.dataset.filter;
+        packageCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+    
+    // Header Effect
+    const header = document.querySelector('header');
+    let lastX = 0, lastY = 0;
+    
+    header.addEventListener('mousemove', (e) => {
+      const rect = header.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      
+      lastX = lastX + (x - lastX) * 0.1;
+      lastY = lastY + (y - lastY) * 0.1;
+      
+      header.querySelector('.header-bg').style.transform = `translate(${lastX * 20}px, ${lastY * 20}px)`;
+    });
+    
+    // Système de particules
+    // Importé directement depuis l'artefact précédent
+  </script>
+  <script>
+    // Configuration du système de particules
+    const particleConfig = {
+      particleCount: 80,
+      color: '#3498db',
+      maxSize: 5,
+      minSize: 1,
+      speed: 0.5,
+      connectionDistance: 120,
+      connectionOpacity: 0.15,
+      hoverRadius: 120,
+      hoverEffect: 2,
+      easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      particleStyles: {
+        mixBlendMode: 'screen',
+        willChange: 'transform, opacity, size'
+      }
+    };
+
+    // Création du canvas pour les particules
+    function createParticleCanvas() {
+      const canvas = document.createElement('canvas');
+      canvas.classList.add('particle-canvas');
+      
+      // Appliquer le style au canvas
+      Object.assign(canvas.style, {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 1,
+        pointerEvents: 'none', // Pour ne pas interférer avec les clics
+        opacity: 0,
+        transition: `opacity 3s ${particleConfig.easing}`
+      });
+      
+      // Ajouter le canvas au header
+      const header = document.querySelector('header');
+      header.appendChild(canvas);
+      
+      // Animation d'entrée
+      setTimeout(() => {
+        canvas.style.opacity = 1;
+      }, 300);
+      
+      return canvas;
+    }
+
+    // Classe Particle
+    class Particle {
+      constructor(canvas, ctx, index) {
+        this.canvas = canvas;
+        this.ctx = ctx;
+        this.index = index;
+        
+        // Définir la position initiale
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        
+        // Vitesse et direction aléatoires
+        this.vx = (Math.random() - 0.5) * particleConfig.speed;
+        this.vy = (Math.random() - 0.5) * particleConfig.speed;
+        
+        // Taille aléatoire
+        this.size = Math.random() * (particleConfig.maxSize - particleConfig.minSize) + particleConfig.minSize;
+        
+        // Opacité aléatoire
+        this.baseOpacity = Math.random() * 0.5 + 0.3;
+        this.opacity = this.baseOpacity;
+        
+        // Effet de pulsation
+        this.pulseSpeed = Math.random() * 0.01;
+        this.pulseAmount = Math.random() * 0.1 + 0.1;
+        this.pulseOffset = Math.random() * Math.PI * 2;
+        
+        // Pour l'effet de souris
+        this.targetX = this.x;
+        this.targetY = this.y;
+        this.isAffectedByMouse = false;
+      }
+      
+      // Mise à jour de la position et des propriétés
+      update(mouseX, mouseY) {
+        // Effet de pulsation
+        this.opacity = this.baseOpacity + Math.sin(Date.now() * this.pulseSpeed + this.pulseOffset) * this.pulseAmount;
+        
+        // Effet de souris
+        if (mouseX && mouseY) {
+          const dx = mouseX - this.x;
+          const dy = mouseY - this.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < particleConfig.hoverRadius) {
+            this.isAffectedByMouse = true;
+            // Effet de répulsion
+            const angle = Math.atan2(dy, dx);
+            const force = (particleConfig.hoverRadius - distance) / particleConfig.hoverRadius;
+            const repelForce = force * particleConfig.hoverEffect;
+            
+            this.targetX = this.x - Math.cos(angle) * repelForce * 5;
+            this.targetY = this.y - Math.sin(angle) * repelForce * 5;
+          } else if (this.isAffectedByMouse) {
+            this.isAffectedByMouse = false;
+            this.targetX = this.x;
+            this.targetY = this.y;
+          }
+        }
+        
+        // Animation fluide vers la position cible
+        if (this.isAffectedByMouse) {
+          this.x += (this.targetX - this.x) * 0.08;
+          this.y += (this.targetY - this.y) * 0.08;
+        } else {
+          // Mouvement normal
+          this.x += this.vx;
+          this.y += this.vy;
+          
+          // Rebondir sur les bords{
     "extends": "next/core-web-vitals"
 }
