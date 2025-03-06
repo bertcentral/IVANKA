@@ -18,4 +18,4 @@ Ce repository contient l'architecture complète pour **CyberNinja 71+** :
 1. **Clonez le repo** :
    ```bash
    git clone https://github.com/bertcentral/IVANKA.git
-   cd IVANKA
+   cd IVANKAhttps://github.com/bertcentral/IVANKA/actions
