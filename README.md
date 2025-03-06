@@ -1,8 +1,7 @@
 # CyberNinja 71+ Omniversal Deployment Architecture
 
-[![Build Status](https://github.com/bertcentral/IVANKA/actions/workflows/pipeline.yml/badge.svg)](https://github.com/bertcentral/IVANKA/actions)
+(https://github.com/bertcentral/IVANKA/actions/workflows/pipeline.yml/badge.svg)](https://github.com/bertcentral/IVANKA/actions)
 
-## Overview
 
 Ce repository contient l'architecture complète pour **CyberNinja 71+** :
 - **Vectorisation Sémantique Cosmique** avec Qdrant & Sentence Transformers.
