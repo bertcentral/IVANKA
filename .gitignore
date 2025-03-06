@@ -41,3 +41,4 @@ yarn-error.log*
 # IDE
 *.code-workspace
 .idea
+git clone https://github.com/bertcentral/IVANKA.git cd IVANKA
