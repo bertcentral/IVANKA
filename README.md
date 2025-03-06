@@ -12,4 +12,3 @@ Ce repository contient l'architecture complète pour **CyberNinja 71+** :
 - **Monitoring & Sécurité** avec Prometheus.
 - **Dockerfile** pour conteneurisation.
 - **Mode Omega Défense Proactive IA** activé (watchdog, backups automatiques, monitoring avancé
- IVANKAhttps://github.com/bertcentral/IVANKA/actions
