@@ -1,8 +1,4 @@
-- [Tests](#tests)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
-- [Contact](#contact)
-- **Backend** : Application Flask **Endpoints RESTful** pour l'authentification (/auth/login, /auth/refresh), la gestion de contenu (/content/update) et le monitoring (/status/metrics).
+(/auth/login, /auth/refresh), la gestion de contenu (/content/update) et le monitoring (/status/metrics).
 - **Monitoring système** : Intégration de psutil pour la collecte de métriques système en temps réel.
 - **Frontend** : Application React servie via NGINX, avec une interface moderne stylisée avec TailwindCSS et Dark Mode natif.
 - **Infrastructure** : Orchestration via Docker Compose, avec réseaux privés et dépendances entre services.
