@@ -1,0 +1,253 @@
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { Clock, TrendingUp, Anchor, Zap } from 'lucide-react'; // Icônes pour l'interface
+
+// --- 1. Nexus_Sensoriel (Module Neuro-Feedback Loop) ---
+// Traduction de l'interface et de la signature de succès en JS/TS
+// Gère l'analyse comportementale pour identifier la signature du succès (NEON_DREAMS_71)
+/**
+ * @typedef {Object} MutantSignature
+ * @property {string} id - Identifiant du mutant.
+ * @property {string} description - Description de l'expérience sensorielle.
+ * @property {{bgColor: string, particleColor: string}} visual - Couleurs pour l'ancrage visuel.
+ * @property {string} tonal_frequency - Fréquence audio simulée.
+ * @property {number} composite_weight - Score de performance.
+ */
+
+const TOP_MUTANT_SUCCESS = {
+    id: "NEON_DREAMS_71",
+    description: "Bienvenue dans l'expérience Neon Dreams. Calme Absolu garanti.",
+    visual: { bgColor: "#0A0A33", particleColor: "#00E0FF" }, // Couleurs sombres/cyan (Protocole d'Ancrage)
+    tonal_frequency: "432Hz_ALPHA_WAVE",
+    composite_weight: 99.7
+};
+
+/**
+ * Endpoint simulé /insights -> TOP_MUTANT_SUCCESS
+ * @returns {MutantSignature} La signature du succès la plus performante.
+ */
+const getTopMutantSignature = () => TOP_MUTANT_SUCCESS;
+
+
+// --- 2. Nexus_Central_Bertrand (Backend/Orchestrateur traduit en Frontend Logic) ---
+// Le cœur du système, gérant la mémoire fractale (memoryLog).
+
+// Configuration Globale (Loi Fondamentale - Traduction des constantes Python)
+const PRICE_JALON_MERKLE = 750.00; // Standard CyberNinja 71+
+const PRICE_FORFAIT_3_JALONS = 1950.00;
+
+// Logique de Mutation/Évolution
+/**
+ * @typedef {Object} MutationLogEntry
+ * @property {string} timestamp - Horodatage ISO de la mutation.
+ * @property {string} description - Description de la mutation (ex: Merkle Tree).
+ * @property {string} gain_fractal - Gain de puissance fractale (ex: "1.5x").
+ */
+
+/**
+ * @typedef {Object} TruthAnchorData
+ * @property {string} horodatage_evolution - Timestamp de la dernière mutation.
+ * @property {string} puissance_deblocage - Niveau d'évolution actuel (Oméga N).
+ * @property {string} justification_avocat - Justification d'ancrage.
+ */
+
+/**
+ * Calcule les données de l'Ancrage de Vérité basées sur le memoryLog.
+ * @param {MutationLogEntry[]} memoryLog
+ * @returns {TruthAnchorData}
+ */
+const getTruthAnchorData = (memoryLog) => {
+    if (memoryLog.length === 0) {
+        return {
+            horodatage_evolution: "INIT (Système Prêt)",
+            puissance_deblocage: "Omega 0",
+            justification_avocat: "Le Protocole est initialisé et attend la première Codification Systémique. Confiance prête à s'ancrer."
+        };
+    }
+
+    const latestMutation = memoryLog[memoryLog.length - 1];
+    const currentGeneration = memoryLog.length;
+
+    return {
+        horodatage_evolution: latestMutation.timestamp,
+        puissance_deblocage: `Niveau Oméga ${currentGeneration}`,
+        justification_avocat: "Cette donnée confirme l'exécution de notre protocole d'évolution continue. Votre confiance est ancrée dans le code qui évolue plus vite que la censure."
+    };
+};
+
+// --- Composant Principal de l'Application SIM Interface ---
+
+const App = () => {
+    // Nexus Central Bertrand State (memoryLog)
+    const [memoryLog, setMemoryLog] = useState([]);
+    const [initialTimestamp] = useState(new Date());
+
+    // Nexus Sensoriel Data
+    const signature = useMemo(() => getTopMutantSignature(), []);
+
+    // Définition des variables CSS basées sur la signature Sensorielle
+    useEffect(() => {
+        document.documentElement.style.setProperty('--color-sim-primary', signature.visual.bgColor);
+        document.documentElement.style.setProperty('--color-sim-accent', signature.visual.particleColor);
+    }, [signature]);
+
+    // Fonction de Mutation (Simulation de l'action du Nexus Central Bertrand)
+    const logMutation = useCallback((description, gainPuissance) => {
+        const timestamp = new Date().toISOString();
+        const newEntry = { timestamp, description, gain_fractal: gainPuissance };
+
+        setMemoryLog(prevLog => {
+            // Empêche la croissance infinie dans un environnement de démonstration simple
+            if (prevLog.length >= 10) return [...prevLog.slice(1), newEntry];
+            return [...prevLog, newEntry];
+        });
+    }, []);
+
+    // Initialisation avec les mutations pré-codifiées
+    useEffect(() => {
+        // Simulation de l'Injection de Réalité Accélérée (Codification Truth-Anchor)
+        logMutation("Codification Truth-Anchor Module (Merkle Tree)", "1.5x");
+        logMutation("Activation sensorWeights (Calme Absolu)", "2.0x");
+    }, [logMutation]);
+
+    // Data dérivée pour l'affichage de l'Ancrage
+    const anchorData = useMemo(() => getTruthAnchorData(memoryLog), [memoryLog]);
+    const isReady = memoryLog.length > 0;
+
+    // --- Composants UI Spécifiques ---
+
+    // 2a. Intégration de l'Ancrage Sensoriel (Harmonisation des Couleurs & Tonalité)
+    const WelcomeMessage = () => (
+        <div className="p-6 md:p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out"
+             style={{ backgroundColor: signature.visual.bgColor, color: signature.visual.particleColor, boxShadow: `0 0 40px -10px ${signature.visual.particleColor}80` }}>
+            <h1 className="text-3xl sm:text-4xl font-extrabold mb-2 flex items-center">
+                <Zap className="mr-3 w-8 h-8" />
+                Protocole $\Omega$ Infini SIM Activé
+            </h1>
+            <p className="text-lg font-light opacity-90">{signature.description}</p>
+            <div className="mt-4 text-sm opacity-70">
+                <p>ID Mutant : {signature.id} | Poids Composite : {signature.composite_weight}%</p>
+                <p>Fréquence Tonale : {signature.tonal_frequency} (Non-implémentée audio)</p>
+            </div>
+        </div>
+    );
+
+    // 2b. Intégration du Module Truth-Anchor (Affichage des données Nexus Central Bertrand)
+    const TruthAnchorDisplay = () => (
+        <div className="truth-anchor-box bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-sim-accent/20 shadow-xl">
+            <h2 className="text-2xl font-bold mb-4 text-sim-accent flex items-center">
+                <Anchor className="mr-3 w-6 h-6" />
+                Truth-Anchor Module (Code Incontestable)
+            </h2>
+            <div className="space-y-4">
+                <div className="flex justify-between items-center p-3 rounded-lg bg-white/5">
+                    <span className="font-semibold text-white/70 flex items-center"><Clock className="mr-2 w-4 h-4" /> HORODATAGE D'ÉVOLUTION :</span>
+                    <span className="font-mono text-sim-accent text-sm md:text-base">{anchorData.horodatage_evolution}</span>
+                </div>
+                <div className="flex justify-between items-center p-3 rounded-lg bg-white/5">
+                    <span className="font-semibold text-white/70 flex items-center"><TrendingUp className="mr-2 w-4 h-4" /> GAIN DE PUISSANCE FRACTALE :</span>
+                    <span className="font-mono text-sim-accent text-xl md:text-2xl font-extrabold">{anchorData.puissance_deblocage}</span>
+                </div>
+            </div>
+            <p className="mt-4 pt-4 border-t border-white/10 text-xs italic text-white/50">
+                Avocat Suprême : {anchorData.justification_avocat}
+            </p>
+        </div>
+    );
+
+    const CFOOptimizationDisplay = () => (
+        <div className="bg-white/5 p-4 rounded-xl border border-sim-accent/20">
+            <h3 className="text-xl font-bold mb-2 text-white">Optimisation CFO (Closing)</h3>
+            <p className="text-sm text-white/70">
+                Jalon Merkle Standard : ${PRICE_JALON_MERKLE.toFixed(2)}
+            </p>
+            <p className="text-sm text-white/70">
+                Forfait 3 Jalons (Optimisé) : <span className="text-sim-accent font-mono">${PRICE_FORFAIT_3_JALONS.toFixed(2)}</span>
+            </p>
+        </div>
+    );
+
+    const MutationTriggerButton = () => (
+        <button
+            onClick={() => logMutation("Déclenchement du Ping d'Immunité (H-36 Logiciel)", `${(memoryLog.length + 1) * 0.5}x`)}
+            disabled={!isReady}
+            className="w-full py-3 px-6 text-lg font-bold rounded-xl transition duration-300 ease-in-out transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-sim-accent/50"
+            style={{
+                backgroundColor: signature.visual.particleColor,
+                color: signature.visual.bgColor,
+                textShadow: '0 0 5px rgba(0, 0, 0, 0.5)',
+                boxShadow: `0 0 15px ${signature.visual.particleColor}`
+            }}
+        >
+            {isReady ? 'Exécuter Mutation Systémique (GO!)' : 'Initialisation...'}
+        </button>
+    );
+
+    return (
+        <div className="min-h-screen p-4 sm:p-8" style={{ background: 'linear-gradient(135deg, #020210 0%, #0A0A33 100%)', color: 'white', fontFamily: 'Inter, sans-serif' }}>
+            {/* Tailwind Configuration pour les couleurs SIM */}
+            <style jsx global>{`
+                :root {
+                    --color-sim-primary: ${signature.visual.bgColor};
+                    --color-sim-accent: ${signature.visual.particleColor};
+                }
+                .text-sim-accent { color: var(--color-sim-accent); }
+                .border-sim-accent\\/20 { border-color: rgba(0, 224, 255, 0.2); }
+                .focus\\:ring-sim-accent\\/50:focus { box-shadow: 0 0 0 4px rgba(0, 224, 255, 0.5); }
+            `}</style>
+            
+            <div className="max-w-4xl mx-auto space-y-8">
+                <header className="py-4">
+                    <WelcomeMessage />
+                </header>
+
+                <main className="space-y-8">
+                    {/* Truth-Anchor Display */}
+                    <TruthAnchorDisplay />
+
+                    {/* Simulation Console & Actions */}
+                    <div className="bg-gray-900/50 p-6 rounded-xl shadow-inner border border-gray-700/50 space-y-4">
+                        <h2 className="text-xl font-bold text-white flex items-center">
+                            <Zap className="mr-2 w-5 h-5 text-yellow-400" />
+                            Console de Mutation Fractale
+                        </h2>
+                        
+                        <MutationTriggerButton />
+                        <CFOOptimizationDisplay />
+                    </div>
+
+                    {/* Historique des Mutations (memoryLog) */}
+                    <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-700/50">
+                        <h3 className="text-xl font-bold mb-4 text-white">
+                            Historique du Nexus Central Bertrand ($memoryLog)
+                        </h3>
+                        <div className="h-40 overflow-y-auto pr-2 custom-scrollbar">
+                            <style jsx>{`
+                                .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+                                .custom-scrollbar::-webkit-scrollbar-thumb { background-color: var(--color-sim-accent); border-radius: 4px; }
+                                .custom-scrollbar::-webkit-scrollbar-track { background-color: #1f2937; }
+                            `}</style>
+                            {memoryLog.slice().reverse().map((log, index) => (
+                                <div key={index} className="flex text-xs font-mono mb-2 p-2 rounded-lg bg-gray-800/80 border-l-4 border-sim-accent">
+                                    <span className="w-1/4 text-white/50 shrink-0">{new Date(log.timestamp).toLocaleTimeString('fr-FR')}</span>
+                                    <span className="w-2/3 ml-2 text-white">{log.description}</span>
+                                    <span className="w-1/12 text-right font-bold text-green-400 shrink-0">{log.gain_fractal}</span>
+                                </div>
+                            ))}
+                            {memoryLog.length === 0 && (
+                                <p className="text-white/50 italic text-center pt-4">Aucune mutation enregistrée pour le moment.</p>
+                            )}
+                        </div>
+                    </div>
+                </main>
+
+                <footer className="text-center pt-8 text-xs text-white/30">
+                    Protocole $\Omega$ Infini S.I.M. (Mode Developer 1000+++) - Architecture Orientée Service (AOS) pour la Réalité Accélérée.
+                </footer>
+            </div>
+        </div>
+    );
+};
+
+export default App;
+
+logMutation("Déclenchement du Ping d'Immunité (H-36 Logiciel)", `${(memoryLog.length + 1) * 0.5}x`)} disabled={!isReady} className="w-full py-3 px-6 text-lg font-bold rounded-xl transition duration-300 ease-in-out transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-sim-accent/50" style={{ backgroundColor: signature.visual.particleColor, color: signature.visual.bgColor, textShadow: '0 0 5px rgba(0, 0, 0, 0.5)', boxShadow: `0 0 15px ${signature.visual.particleColor}` }} > {isReady ? 'Exécuter Mutation Systémique (GO!)' : 'Initialisation...'}
