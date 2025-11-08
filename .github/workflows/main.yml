@@ -1,0 +1,34 @@
+name: Nexus Core SSS Integration Tests
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - feature/**
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  integration_test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install express helmet express-rate-limit secrets.js-grempe
+
+      - name: Run Core Self-Tests
+        run: node server_all_in_one.js --selftest
+
+      - name: Run SSS/Audit Integration Tests
+        run: node server_all_in_one.js --integration-tests
+
